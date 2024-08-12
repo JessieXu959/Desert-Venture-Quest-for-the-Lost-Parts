@@ -1,27 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Desert Venture: Quest for the Lost Parts</title>
-    
 </head>
-<body>
-   
-    <div>
-        <h1 class="text-lime-100 bg-lime-900 text-center p-5 text-3xl font-bold ">Desert Venture: Quest for the Lost Parts</h1>
-        
-    </div>
-    <div>
-      <button class="bg-yellow-500 text-gray-900 font-bold text-1xl text-center p-5">START</button>
-    </div>
-    
-  
-    <div id="game-board" class="grid-container">
 
-    </div>
-   
-    <button></button>
+<body class="bg-gray-800 text-white min-h-screen flex flex-col items-center justify-center">
+
+    <!-- Header Section -->
+    <header class="w-full">
+        <h1 class="text-lime-100 bg-lime-900 text-center p-8 text-4xl font-bold shadow-md">
+            Desert Venture: Quest for the Lost Parts
+        </h1>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="flex flex-col items-center mt-10">
+        <!-- Description -->
+        <p class="text-gray-200 text-center mb-8 text-lg">
+            Embark on an epic adventure to find the lost parts in the desert. Enter your name and click start to begin!
+        </p>
+
+        <!-- Name Input -->
+        <div class="mb-6">
+            <input type="text" id="player-name" placeholder="Enter your name" class="p-3 rounded-lg text-gray-900">
+        </div>
+
+        <!-- Start Button -->
+        <button id="start-button" class="bg-yellow-500 text-gray-900 font-bold text-2xl py-3 px-6 rounded-lg hover:bg-yellow-600 transition">
+            START
+        </button>
+    </main>
+
+    <!-- Script to Handle Start Button Click -->
+    <script>
+        document.getElementById('start-button').addEventListener('click', function() {
+            const playerName = document.getElementById('player-name').value;
+            if (playerName.trim() !== "") {
+                // You can store the player's name in localStorage or pass it as a URL parameter
+                localStorage.setItem('playerName', playerName);  // Storing the name in localStorage
+
+                // Navigate to the game.html page
+                window.location.href = 'game.html';
+            } else {
+                alert('Please enter your name before starting the game!');
+            }
+        });
+    </script>
+
 </body>
+
 </html>
