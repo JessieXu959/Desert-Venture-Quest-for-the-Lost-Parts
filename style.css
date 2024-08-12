@@ -1,0 +1,228 @@
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:monospace;
+
+}
+body
+{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh; 
+    background-color:#ea580c;
+}
+.container{
+    
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    gap:30px;
+    background-color: #fdba74;
+    padding:40px 60px;
+   
+}
+h1{
+    font-size :3em;
+    color:black;
+    text-transform:uppercase;
+    letter-spacing:0.1em;
+}
+.DigMove
+{
+    
+    padding:15px 20px;
+    color:#f97316;
+    background-color:#fff;
+    border:none;
+    font-size:1.5em;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    cursor:pointer;
+    font-weight:600;
+    border-radius: 5px;
+}
+.DigMove:focus{
+    color:#fff;
+    background:#f97316;
+
+}
+.game{
+    width:440px;
+    height:440px;
+    display:flex;
+    gap:10px;
+    transform-style:preserve-3d;
+    perspective:500px;
+}
+
+.game-container {
+  
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    grid-template-rows: repeat(5, 1fr); 
+    grid-row-gap: 8px; 
+    grid-column-gap: 8px; 
+    width: 500px; 
+    height: 500px; 
+    margin: auto; 
+    background-color: rgb(255, 222, 165);
+    border: 3px solid black;
+    box-sizing: border-box;
+    border-radius: 3px;
+    padding: 5px;
+}
+  
+.grid-item {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    border: 1px solid black;
+    box-sizing: border-box;
+    border-radius: 3px;
+    padding: 3px; 
+    perspective: 1000px;
+    cursor: pointer; 
+    position: relative;
+    transition: border-color 0.3s;
+    aspect-ratio: 1px;; 
+    
+  }
+  
+  .grid-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; 
+    
+}
+
+.back {
+    background-color: #ca8a04; 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none; 
+  }
+  #moveButton{
+    padding: 10px 20px; 
+    font-size: 16px; 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center; 
+    cursor: pointer; 
+    outline: none; 
+    color: white; 
+    background-color: #965300dc; 
+    border: none; 
+    border-radius: 5px; 
+    box-shadow: 0 4px #999; 
+    transition: all 0.1s; 
+  }
+  #digButton{
+    padding: 10px 20px; 
+    font-size: 16px; 
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center; 
+    cursor: pointer; 
+    outline: none; 
+    color: white; 
+    background-color: #965300dc; 
+    border: none;
+    border-radius: 5px; 
+    box-shadow: 0 4px #999; 
+    transition: all 0.1s; 
+  }
+  #moveButton.active {
+    background-color: #3e8e55;
+  box-shadow: 0 2px #666; 
+  transform: translateY(2px); 
+  }
+  #moveButton:hover{
+    background-color: #74e57a;
+  }
+  #digButton.active{
+    background-color:  #3e8e41;
+    box-shadow: 0 2px #666; 
+    transform: translateY(2px); 
+  }
+  #digButton:hover{
+    background-color: #74e57a;
+  }
+  
+  
+
+  .grid-item.highlight {
+    border-color: #f48d07;
+    border-width: 5px;
+   
+    
+  }
+  .grid-item.player {
+  border-color: #4CAF50; 
+}
+.selected {
+  border: 2px solid orange; 
+}
+  .highlight-movable {
+    border: 5px solid white; 
+  }
+  .player {
+    max-width: 100%; 
+    display: block;
+ 
+  }
+
+  #playerInfo {
+    background-color: #f3e4d3; 
+    border: 2px solid #c9a66b; 
+    border-radius: 8px; 
+    padding: 10px;
+    width: 250px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    font-family: 'Arial', sans-serif; 
+  }
+  
+  #playerInfo div {
+    margin-bottom: 10px; 
+  }
+  
+  #playerInfo #playerDisplay {
+    color: red; 
+    font-weight: bold;
+    font-size: 1.2em; 
+  }
+  
+  #playerInfo #waterSupply,
+  #playerInfo #actionIndicator,#playerInfo #foundParts {
+    display: flex;
+    align-items: center;
+  }
+  
+  #playerInfo #waterSupply:before,
+  #playerInfo #actionIndicator:before,#playerInfo #foundParts:before {
+    content: '';
+    display: block;
+    width: 30px; 
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+  }
+  
+  #playerInfo #waterSupply:before {
+    background-image: url('Assets/Assets/Water.png');
+  }
+  
+  #playerInfo #actionIndicator:before {
+    background-image: url('Assets/Assets/Action\ Points.png');
+  }
+  #playerInfo #foundParts:before {
+    background-image: url('Assets/Assets/foundParts.png');
+  }
+  
+  
