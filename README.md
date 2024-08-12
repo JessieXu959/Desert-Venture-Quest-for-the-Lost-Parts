@@ -3,13 +3,6 @@
 ### Author: Xu Jinxi
 ### Web Programming 
 
-This solution was submitted and created by the student above for the Web Programming course.  
-I declare that this solution is my own work. I did not copy or use it from a third party solution.  
-I did not forward my solution to my fellow students, nor did I publish it.
-
-Eötvös Loránd University Student Requirements System (Organizational and Operational Regulations of ELTE, Volume II, § 74/C) states that if a student has been working on the work - or at least a significant part of it - of another student as his or her own, it is a disciplinary offence.  
-The most serious consequence of a disciplinary offence is dismissal from the university.
-
 ## Game Explanation
 
 ### 1. How to start the game?
